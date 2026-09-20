@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Videojuegos "William Wallace"</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&family=Press+Start+2P&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <header class="header">
+        <h1> Tienda de Videojuegos "William Wallace"</h1>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="index.html"><img src="images/logo_william_wallace.png" width="140"
+                    alt="Logo de la tienda"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html" aria-current="page">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="productos.html" id="navbarDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Productos
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="productos.html#consolas-retro">Consolas Retro</a>
+                            <a class="dropdown-item" href="productos.html#juegos">Juegos</a>
+                            <a class="dropdown-item" href="productos.html#accesorios">Accesorios</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="productos.html#merchandising">Merchandising</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+                <form class="d-flex my-2 my-lg-0">
+                    <input class="form-control me-sm-2" type="search" placeholder="Search"
+                        aria-label="Search">
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Buscar</button>
+                </form>
+            </div>
+        </nav>
+
+
+
+    </header>
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+        <!-- Conforme a las instrucciones de la tarea se agregan intervalos de 3 segundos-->
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="3000">
+                <img src="images/AOE2.jpg" class="d-block w-100" alt="Age of Empires II">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="images/zelda.jpg" class="d-block w-100" alt="The Legend of Zelda: Ocarina of Time">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="images/super-mario.jpg" class="d-block w-100" alt="Super Mario Bros">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <main class="content">
+        <section class="hero" id="hero-principal">
+            <div class="row align-items-center g-4">
+                <div class="col-12 col-lg-7 hero-text">
+                    <span class="eyebrow">Desde 1993</span>
+                    <h2>Retro gaming para quienes aman la historia de los videojuegos.</h2>
+                    <p>En nuestra tienda encontrarás consolas, accesorios y clásicos que marcaron una época. Un
+                        espacio
+                        pensado para fanáticos del gaming retro y los juegos que nunca pasan de moda. Ven a
+                        revivir la magia
+                        de los juegos clásicos de tu juventud. </p>
+                    <div class="hero-actions">
+                        <a class="button primary" href="productos.html">Ver productos</a>
+                        <a class="button secondary" href="nosotros.html">Nuestra historia</a>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-5 hero-panel">
+                    <div class="panel-card">
+                        <span>Más vendidos</span>
+                        <strong>Game Boy Advance</strong>
+                    </div>
+                    <div class="panel-card accent">
+                        <span>Clásicos</span>
+                        <strong>PlayStation 2</strong>
+                    </div>
+                    <div class="panel-card">
+                        <span>Icono retro</span>
+                        <strong>Nintendo DS</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="row g-4">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="feature-card">
+                        <h3>+30 años</h3>
+                        <p>Historia y experiencia en videojuegos clásicos.</p>
+                    </article>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="feature-card">
+                        <h3>Catálogo retro</h3>
+                        <p>Productos únicos para coleccionistas y amantes del gaming.</p>
+                    </article>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="feature-card">
+                        <h3>Atención real</h3>
+                        <p>Te ayudamos a encontrar la consola o juego ideal.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <div class="box">
+            <h2>Productos destacados</h2>
+            <ul class="lista-juegos row g-3 list-unstyled">
+                <li class="col-6 col-md-4">Game Boy Advance</li>
+                <li class="col-6 col-md-4">Nintendo DS</li>
+                <li class="col-6 col-md-4">PlayStation 2</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-col">
+                <strong>Tienda de Videojuegos "William Wallace"</strong>
+                <p>&copy; 2023 Todos los derechos reservados.</p>
+            </div>
+            <div class="footer-col">
+                <span>Contacto</span>
+                <p>info@williamwallace.com</p>
+            </div>
+            <div class="footer-col">
+                <span>Ubicación</span>
+                <p>Alameda N°1328, Santiago Centro</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="main.js" defer></script>
+</body>
+
+</html>
