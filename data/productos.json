@@ -1,0 +1,191 @@
+[
+  {
+    "id": 1,
+    "nombre": "Game Boy Advance",
+    "categoria": "consolas",
+    "precio": 150000,
+    "descripcion": "La Game Boy Advance es una consola portátil de videojuegos desarrollada por Nintendo en el año 2001.",
+    "imagen": "images/game-boy.jpg",
+    "alt": "Game Boy Advance"
+  },
+  {
+    "id": 2,
+    "nombre": "Nintendo DS",
+    "categoria": "consolas",
+    "precio": 180000,
+    "descripcion": "La Nintendo DS es una consola portátil de videojuegos desarrollada por Nintendo. Fue lanzada en 2004 y es considerada una de las consolas más exitosas de la historia.",
+    "imagen": "images/nintendo-ds.jpg",
+    "alt": "Nintendo DS"
+  },
+  {
+    "id": 3,
+    "nombre": "PlayStation 2",
+    "categoria": "consolas",
+    "precio": 280000,
+    "descripcion": "La PlayStation 2 es una consola de videojuegos de sexta generación desarrollada por Sony. Fue lanzada en el año 2000 y es la consola más vendida de todos los tiempos, con más de 155 millones de unidades vendidas en todo el mundo. Ven y adquiere una para ti, nos quedan pocas unidades.",
+    "imagen": "images/play-station2.jpg",
+    "alt": "PlayStation 2"
+  },
+  {
+    "id": 4,
+    "nombre": "Nintendo NES",
+    "categoria": "consolas",
+    "precio": 320000,
+    "descripcion": "¿Qué más se puede decir de la Nintendo NES que no se haya dicho ya? Con tan sólo 8 bits fue capaz de crear juegos legendarios que cambiaron el paradigma y pusieron en el mapa a Nintendo con toda la saga Mario.",
+    "imagen": "images/nintendo_nes.jpg",
+    "alt": "Nintendo NES"
+  },
+  {
+    "id": 5,
+    "nombre": "Nintendo 64",
+    "categoria": "consolas",
+    "precio": 350000,
+    "descripcion": "La Nintendo 64 es una consola de videojuegos de 64 bits desarrollada por Nintendo. Fue lanzada en 1996 y es considerada una de las mejores consolas de su generación.",
+    "imagen": "images/nintendo_64.jpg",
+    "alt": "Nintendo 64"
+  },
+  {
+    "id": 6,
+    "nombre": "PlayStation 1",
+    "categoria": "consolas",
+    "precio": 250000,
+    "descripcion": "Es la primera consola de la serie PlayStation desarrollada por Sony. Es una consola con más de 20 años pero sigue completamente vigente.",
+    "imagen": "images/playstation_one.jpg",
+    "alt": "PlayStation 1"
+  },
+  {
+    "id": 7,
+    "nombre": "Age of Empire II",
+    "categoria": "juegos",
+    "precio": 15000,
+    "descripcion": "Conocido juego de estrategia en tiempo real. Con más de veinte años de historia y una gran comunidad alrededor del mundo.",
+    "imagen": "images/AOE2.jpg",
+    "alt": "Juego Age of Empires II"
+  },
+  {
+    "id": 8,
+    "nombre": "Super Mario Bros",
+    "categoria": "juegos",
+    "precio": 19000,
+    "descripcion": "El clásico plataformero de Nintendo que definió el género y marcó a toda una generación de jugadores.",
+    "imagen": "images/super-mario.jpg",
+    "alt": "Super Mario Bros"
+  },
+  {
+    "id": 9,
+    "nombre": "The Legend of Zelda: Ocarina of Time",
+    "categoria": "juegos",
+    "precio": 15000,
+    "descripcion": "Aclamada aventura de acción en 3D, considerada una de las mejores obras de la historia de los videojuegos.",
+    "imagen": "images/zelda.jpg",
+    "alt": "The Legend of Zelda: Ocarina of Time"
+  },
+  {
+    "id": 10,
+    "nombre": "Final Fantasy",
+    "categoria": "juegos",
+    "precio": 20000,
+    "descripcion": "Emblemático RPG japonés con una historia épica y un sistema de combate por turnos inolvidable.",
+    "imagen": "images/final-fantasy.jpg",
+    "alt": "Final Fantasy"
+  },
+  {
+    "id": 11,
+    "nombre": "Halo",
+    "categoria": "juegos",
+    "precio": 25000,
+    "descripcion": "Shooter de ciencia ficción que revolucionó el género en consolas con Master Chief como protagonista.",
+    "imagen": "images/Halo.jpg",
+    "alt": "Halo"
+  },
+  {
+    "id": 12,
+    "nombre": "Street Fighter",
+    "categoria": "juegos",
+    "precio": 18000,
+    "descripcion": "Uno de los juegos de pelea más icónicos, con combos y personajes que marcaron la escena competitiva.",
+    "imagen": "images/street-fighter.jpg",
+    "alt": "Street Fighter"
+  },
+  {
+    "id": 13,
+    "nombre": "Pokémon",
+    "categoria": "juegos",
+    "precio": 22000,
+    "descripcion": "Aventura de captura y batallas de criaturas que se convirtió en un fenómeno cultural mundial.",
+    "imagen": "images/pokemon.jpg",
+    "alt": "Pokémon"
+  },
+  {
+    "id": 14,
+    "nombre": "Donkey Kong",
+    "categoria": "juegos",
+    "precio": 17000,
+    "descripcion": "Clásico plataformero arcade protagonizado por el icónico gorila de Nintendo.",
+    "imagen": "images/donkey-kong.jpg",
+    "alt": "Donkey Kong"
+  },
+  {
+    "id": 15,
+    "nombre": "Metal Gear Solid",
+    "categoria": "juegos",
+    "precio": 21000,
+    "descripcion": "Pionero del sigilo táctico, con una trama profunda sobre guerra y espionaje.",
+    "imagen": "images/metal_gear.jpg",
+    "alt": "Metal Gear Solid"
+  },
+  {
+    "id": 16,
+    "nombre": "Resident Evil",
+    "categoria": "juegos",
+    "precio": 23000,
+    "descripcion": "Survival horror que sentó las bases del género con zombis y una atmósfera opresiva.",
+    "imagen": "images/resident_Evil.jpg",
+    "alt": "Resident Evil"
+  },
+  {
+    "id": 17,
+    "nombre": "Chrono Trigger",
+    "categoria": "juegos",
+    "precio": 19000,
+    "descripcion": "RPG atemporal con viajes en el tiempo y una de las mejores narrativas de la era de los 16 bits.",
+    "imagen": "images/chrono_trigger.jpg",
+    "alt": "Chrono Trigger"
+  },
+  {
+    "id": 18,
+    "nombre": "God of War",
+    "categoria": "juegos",
+    "precio": 24000,
+    "descripcion": "Épica de acción inspirada en la mitología griega, protagonizada por Kratos.",
+    "imagen": "images/god_war.jpg",
+    "alt": "God of War"
+  },
+  {
+    "id": 19,
+    "nombre": "Control inalámbrico para PlayStation 4",
+    "categoria": "accesorios",
+    "precio": 45000,
+    "descripcion": "Control inalámbrico compatible con PlayStation 4. Colores disponibles: Rojo, Naranjo, Azul y Negro. Pocas unidades disponibles.",
+    "imagen": "images/control_play4.jpg",
+    "alt": "Control para videojuegos"
+  },
+  {
+    "id": 20,
+    "nombre": "Volante de carreras para Xbox One",
+    "categoria": "accesorios",
+    "precio": 60000,
+    "descripcion": "Volante de carreras con pedales para Xbox One. Mejora la experiencia de juegos de carreras. Gran sensibilidad y control.",
+    "imagen": "images/volante.jpg",
+    "alt": "Volante de carreras para Xbox One"
+  },
+  {
+    "id": 21,
+    "nombre": "Audífonos gaming con micrófono",
+    "categoria": "accesorios",
+    "precio": 35000,
+    "descripcion": "Audífonos gaming con micrófono integrado.",
+    "imagen": "images/audif_gaming.jpg",
+    "alt": "Audífonos gaming con micrófono"
+  }
+]

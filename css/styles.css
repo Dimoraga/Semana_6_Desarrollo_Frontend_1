@@ -414,12 +414,9 @@ main p {
   color: rgba(255, 255, 255, 0.6);
   margin-bottom: 4px;
 }
-/* Se implementa un diseño responsivo mediante 
-media queries conforme a los requerimientos de la pauta de evaluación.
-Se optó por un diseño mobile-first invertido, con 3 puntos de quiebre estándar
-*/
 
-/* Breakpoint para tablets y notebooks pequeños */
+
+
 
 @media (max-width: 1024px) {
   .content,
@@ -486,4 +483,140 @@ Se optó por un diseño mobile-first invertido, con 3 puntos de quiebre estánda
     flex-direction: column;
     text-align: center;
   }
+}
+
+/* Carrito de compras */
+
+.carrito {
+  background: var(--color-card);
+  border: 1px solid var(--color-borde);
+  border-top: 4px solid var(--color-acento);
+  border-radius: 14px;
+  box-shadow: var(--sombra-suave);
+  padding: 20px 24px;
+  margin: 0 0 32px;
+  max-width: 520px;
+}
+
+.carrito-cabecera {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.carrito-cabecera h2 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.carrito-badge {
+  min-width: 32px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--color-acento);
+  color: var(--color-texto-claro);
+  font-weight: 700;
+  text-align: center;
+}
+
+.carrito-vacio {
+  margin: 8px 0 16px;
+  color: #6b7280;
+  font-style: italic;
+}
+
+.carrito-lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 260px;
+  overflow-y: auto;
+}
+
+.carrito-lista li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.carrito-item-nombre {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.carrito-item-precio {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.carrito-quitar {
+  width: 28px;
+  height: 28px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(15, 23, 42, 0.06);
+  color: var(--color-texto);
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.carrito-quitar:hover,
+.carrito-quitar:focus-visible {
+  background: #dc2626;
+  color: var(--color-texto-claro);
+}
+
+.carrito-pie {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.carrito-total {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.carrito-vaciar {
+  padding: 8px 16px;
+  border: 1px solid var(--color-acento-oscuro);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--color-acento-oscuro);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.carrito-vaciar:hover:not(:disabled) {
+  background: var(--color-acento-oscuro);
+  color: var(--color-texto-claro);
+}
+
+.carrito-vaciar:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+
+/* Catálogo dinámico (index) */
+
+.catalogo {
+  margin: 32px 0;
+}
+
+.catalogo-estado {
+  color: #6b7280;
+  font-style: italic;
 }

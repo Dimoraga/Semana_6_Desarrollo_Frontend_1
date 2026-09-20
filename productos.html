@@ -22,8 +22,8 @@
             <a class="navbar-brand" href="index.html"><img src="images/logo_william_wallace.png" width="140"
                     alt="Logo de la tienda"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle navigation">
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -53,8 +53,8 @@
                         <a class="nav-link" href="contacto.html">Contacto</a>
                     </li>
                 </ul>
-                <form class="d-flex my-2 my-lg-0">
-                    <input class="form-control me-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <form class="d-flex my-2 my-lg-0" id="form-busqueda">
+                    <input class="form-control me-sm-2" type="search" id="busqueda" placeholder="Buscar producto" aria-label="Buscar producto">
                     <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Buscar</button>
                 </form>
             </div>
@@ -64,222 +64,320 @@
     <main>
         <h2>Lista de Productos</h2>
 
+        <!--  carrito de compras de la tienda  -->
+
+        <section class="carrito" aria-labelledby="titulo-carrito">
+            <div class="carrito-cabecera">
+                <h2 id="titulo-carrito">&#128722; Carrito</h2>
+                <span class="carrito-badge" aria-label="Productos en el carrito">
+                    <span id="contador">0</span>
+                </span>
+            </div>
+            <p class="carrito-vacio" id="carrito-vacio">Tu carrito está vacío. ¡Agrega algún clásico!</p>
+            <ul id="lista-carrito" class="carrito-lista"></ul>
+            <div class="carrito-pie">
+                <p class="carrito-total">Total: $<span id="total">0</span></p>
+                <button type="button" class="carrito-vaciar" id="vaciar-carrito" disabled>Vaciar carrito</button>
+            </div>
+        </section>
+
         <h3 id="consolas-retro"> Consolas Retro</h3>
 
         <div class="row g-4">
-            <div class="col-12 col-sm-6 col-md-4">
+            <div class="col-12 col-sm-6 col-md-4 producto" data-nombre="Game Boy Advance" data-precio="150000">
                 <div class="card h-100">
                     <img src="images/game-boy.jpg" class="card-img-top" alt="Game Boy Advance">
                     <div class="card-body">
                         <p class="card-text">Game Boy Advance</p>
+                        <p>La Game Boy Advance es una consola portátil de videojuegos desarrollada por Nintendo en el año 2001.</p>
+                        <p>$150.000.-</p>
+                        <button class="btn-agregar">Agregar al carro</button>
                     </div>
                 </div>
             </div>
 
-            <div class="col-12 col-sm-6 col-md-4">
+            <div class="col-12 col-sm-6 col-md-4 producto" data-nombre="Nintendo DS" data-precio="180000">
                 <div class="card h-100">
                     <img src="images/nintendo-ds.jpg" class="card-img-top" alt="Nintendo DS">
                     <div class="card-body">
                         <p class="card-text">Nintendo DS</p>
+                        <p>La Nintendo DS es una consola portátil de videojuegos desarrollada por Nintendo. Fue lanzada en 2004 y es considerada una de las consolas más exitosas de la historia.</p>
+                        <p>$180.000.-</p>
+                        <button class="btn-agregar">Agregar al carro</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 producto" data-nombre="PlayStation 2" data-precio="280000">
+                <div class="card h-100">
+                    <img src="images/play-station2.jpg" class="card-img-top" alt="PlayStation 2">
+                    <div class="card-body">
+                        <p class="card-text">PlayStation 2</p>
+                        <p>La PlayStation 2 es una consola de videojuegos de sexta generación desarrollada por Sony. Fue lanzada en el año 2000 y es la consola más vendida de todos los tiempos, con más de 155 millones de unidades vendidas en todo el mundo. Ven y adquiere una para ti, nos quedan pocas unidades.</p>
+                        <p>$280.000.-</p>
+                        <button class="btn-agregar">Agregar al carro</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 producto" data-nombre="Nintendo NES" data-precio="320000">
+                <div class="card h-100">
+                    <img src="images/nintendo_nes.jpg" class="card-img-top" alt="Nintendo NES">
+                    <div class="card-body">
+                        <p class="card-text">Nintendo NES</p>
+                        <p>¿Qué más se puede decir de la Nintendo NES que no se haya dicho ya? Con tan sólo 8 bits fue capaz de crear juegos legendarios que cambiaron el paradigma y pusieron en el mapa a Nintendo con toda la saga Mario.</p>
+                        <p>$320.000.-</p>
+                        <button class="btn-agregar">Agregar al carro</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 producto" data-nombre="Nintendo 64" data-precio="350000">
+                <div class="card h-100">
+                    <img src="images/nintendo_64.jpg" class="card-img-top" alt="Nintendo 64">
+                    <div class="card-body">
+                        <p class="card-text">Nintendo 64</p>
+                        <p>La Nintendo 64 es una consola de videojuegos de 64 bits desarrollada por Nintendo. Fue lanzada en 1996 y es considerada una de las mejores consolas de su generación.</p>
+                        <p>$350.000.-</p>
+                        <button class="btn-agregar">Agregar al carro</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 producto" data-nombre="PlayStation 1" data-precio="250000">
+                <div class="card h-100">
+                    <img src="images/playstation_one.jpg" class="card-img-top" alt="PlayStation 1">
+                    <div class="card-body">
+                        <p class="card-text">PlayStation 1</p>
+                        <p>Es la primera consola de la serie PlayStation desarrollada por Sony. Es una consola con más de 20 años pero sigue completamente vigente.</p>
+                        <p>$250.000.-</p>
+                        <button class="btn-agregar">Agregar al carro</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <h3 id="juegos"> Juegos </h3>
+        <div class="row g-4">
+            <div class="col-12 col-sm-6 col-lg-4 producto" data-nombre="Age of Empire II" data-precio="15000">
+                <div class="card h-100">
+                    <img src="images/AOE2.jpg" class="card-img-top card-img-juego" alt="Juego Age of Empires II">
+                    <div class="card-body">
+                        <p class="card-text">Age of Empire II</p>
+                        <p>Conocido juego de estrategia en tiempo real. Con más de veinte años de historia y una gran comunidad alrededor del mundo.</p>
+                        <p>$15.000.-</p>
+                        <button class="btn-agregar">Agregar carro</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-4 producto" data-nombre="Super Mario Bros" data-precio="19000">
+                <div class="card h-100">
+                    <img src="images/super-mario.jpg" class="card-img-top card-img-juego" alt="Super Mario Bros">
+                    <div class="card-body">
+                        <p class="card-text">Super Mario Bros</p>
+                        <p>El clásico plataformero de Nintendo que definió el género y marcó a toda una generación de jugadores.</p>
+                        <p>$19.000.-</p>
+                        <button class="btn-agregar">Agregar carro</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-4 producto" data-nombre="The Legend of Zelda: Ocarina of Time" data-precio="15000">
+                <div class="card h-100">
+                    <img src="images/zelda.jpg" class="card-img-top card-img-juego" alt="The Legend of Zelda: Ocarina of Time">
+                    <div class="card-body">
+                        <p class="card-text">The Legend of Zelda: Ocarina of Time</p>
+                        <p>Aclamada aventura de acción en 3D, considerada una de las mejores obras de la historia de los videojuegos.</p>
+                        <p>$15.000.-</p>
+                        <button class="btn-agregar">Agregar carro</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-4 producto" data-nombre="Final Fantasy" data-precio="20000">
+                <div class="card h-100">
+                    <img src="images/final-fantasy.jpg" class="card-img-top card-img-juego" alt="Final Fantasy">
+                    <div class="card-body">
+                        <p class="card-text">Final Fantasy</p>
+                        <p>Emblemático RPG japonés con una historia épica y un sistema de combate por turnos inolvidable.</p>
+                        <p>$20.000.-</p>
+                        <button class="btn-agregar">Agregar carro</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-4 producto" data-nombre="Halo" data-precio="25000">
+                <div class="card h-100">
+                    <img src="images/Halo.jpg" class="card-img-top card-img-juego" alt="Halo">
+                    <div class="card-body">
+                        <p class="card-text">Halo</p>
+                        <p>Shooter de ciencia ficción que revolucionó el género en consolas con Master Chief como protagonista.</p>
+                        <p>$25.000.-</p>
+                        <button class="btn-agregar">Agregar carro</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-4 producto" data-nombre="Street Fighter" data-precio="18000">
+                <div class="card h-100">
+                    <img src="images/street-fighter.jpg" class="card-img-top card-img-juego" alt="Street Fighter">
+                    <div class="card-body">
+                        <p class="card-text">Street Fighter</p>
+                        <p>Uno de los juegos de pelea más icónicos, con combos y personajes que marcaron la escena competitiva.</p>
+                        <p>$18.000.-</p>
+                        <button class="btn-agregar">Agregar carro</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-4 producto" data-nombre="Pokémon" data-precio="22000">
+                <div class="card h-100">
+                    <img src="images/pokemon.jpg" class="card-img-top card-img-juego" alt="Pokémon">
+                    <div class="card-body">
+                        <p class="card-text">Pokémon</p>
+                        <p>Aventura de captura y batallas de criaturas que se convirtió en un fenómeno cultural mundial.</p>
+                        <p>$22.000.-</p>
+                        <button class="btn-agregar">Agregar carro</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-4 producto" data-nombre="Donkey Kong" data-precio="17000">
+                <div class="card h-100">
+                    <img src="images/donkey-kong.jpg" class="card-img-top card-img-juego" alt="Donkey Kong">
+                    <div class="card-body">
+                        <p class="card-text">Donkey Kong</p>
+                        <p>Clásico plataformero arcade protagonizado por el icónico gorila de Nintendo.</p>
+                        <p>$17.000.-</p>
+                        <button class="btn-agregar">Agregar carro</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-4 producto" data-nombre="Metal Gear Solid" data-precio="21000">
+                <div class="card h-100">
+                    <img src="images/metal_gear.jpg" class="card-img-top card-img-juego" alt="Metal Gear Solid">
+                    <div class="card-body">
+                        <p class="card-text">Metal Gear Solid</p>
+                        <p>Pionero del sigilo táctico, con una trama profunda sobre guerra y espionaje.</p>
+                        <p>$21.000.-</p>
+                        <button class="btn-agregar">Agregar carro</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-4 producto" data-nombre="Resident Evil" data-precio="23000">
+                <div class="card h-100">
+                    <img src="images/resident_Evil.jpg" class="card-img-top card-img-juego" alt="Resident Evil">
+                    <div class="card-body">
+                        <p class="card-text">Resident Evil</p>
+                        <p>Survival horror que sentó las bases del género con zombis y una atmósfera opresiva.</p>
+                        <p>$23.000.-</p>
+                        <button class="btn-agregar">Agregar carro</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-4 producto" data-nombre="Chrono Trigger" data-precio="19000">
+                <div class="card h-100">
+                    <img src="images/chrono_trigger.jpg" class="card-img-top card-img-juego" alt="Chrono Trigger">
+                    <div class="card-body">
+                        <p class="card-text">Chrono Trigger</p>
+                        <p>RPG atemporal con viajes en el tiempo y una de las mejores narrativas de la era de los 16 bits.</p>
+                        <p>$19.000.-</p>
+                        <button class="btn-agregar">Agregar carro</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-4 producto" data-nombre="God of War" data-precio="24000">
+                <div class="card h-100">
+                    <img src="images/god_war.jpg" class="card-img-top card-img-juego" alt="God of War">
+                    <div class="card-body">
+                        <p class="card-text">God of War</p>
+                        <p>Épica de acción inspirada en la mitología griega, protagonizada por Kratos.</p>
+                        <p>$24.000.-</p>
+                        <button class="btn-agregar">Agregar carro</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <h3 id="accesorios"> Accesorios </h3>
+        <div class="row g-4">
+            <div class="col-12 col-sm-6 col-md-4 producto" data-nombre="Control inalámbrico para PlayStation 4" data-precio="45000">
+                <div class="card h-100">
+                    <img src="images/control_play4.jpg" class="card-img-top" alt="Control para videojuegos">
+                    <div class="card-body">
+                        <p class="card-text">Control inalámbrico para PlayStation 4</p>
+                        <p>Control inalámbrico compatible con PlayStation 4. Colores disponibles: Rojo, Naranjo, Azul y Negro. Pocas unidades disponibles.</p>
+                        <p>$45.000.-</p>
+                        <button class="btn-agregar">Agregar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 producto" data-nombre="Volante de carreras para Xbox One" data-precio="60000">
+                <div class="card h-100">
+                    <img src="images/volante.jpg" class="card-img-top" alt="Volante de carreras para Xbox One">
+                    <div class="card-body">
+                        <p class="card-text">Volante de carreras para Xbox One</p>
+                        <p>Volante de carreras con pedales para Xbox One. Mejora la experiencia de juegos de carreras. Gran sensibilidad y control.</p>
+                        <p>$60.000.-</p>
+                        <button class="btn-agregar">Agregar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 producto" data-nombre="Audífonos gaming con micrófono" data-precio="35000">
+                <div class="card h-100">
+                    <img src="images/audif_gaming.jpg" class="card-img-top" alt="Audífonos gaming con micrófono">
+                    <div class="card-body">
+                        <p class="card-text">Audífonos gaming con micrófono</p>
+                        <p>Audífonos gaming con micrófono integrado.</p>
+                        <p>$35.000.-</p>
+                        <button class="btn-agregar">Agregar</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <h3 id="merchandising"> Merchandising </h3>
+        <div class="row g-4">
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <p class="card-text">Figuras de acción de personajes de videojuegos</p>
                     </div>
                 </div>
             </div>
 
             <div class="col-12 col-sm-6 col-md-4">
                 <div class="card h-100">
-                    <img src="images/play-station2.jpg" class="card-img-top" alt="PlayStation 2">
                     <div class="card-body">
-                        <p class="card-text">PlayStation 2</p>
+                        <p class="card-text">Camisetas con diseños de videojuegos clásicos</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <p class="card-text">Pósters y arte conceptual de juegos populares</p>
                     </div>
                 </div>
             </div>
         </div>
-
-                    <h3 id="juegos"> Juegos </h3>
-                    <div class="row g-4">
-                        <div class="col-12 col-sm-6 col-lg-4">
-                            <div class="card h-100">
-                                <img src="images/AOE2.jpg" class="card-img-top card-img-juego" alt="Juego Age of Empires II">
-                                <div class="card-body">
-                                    <p class="card-text">Conocido juego de estrategia en tiempo real. Con más de veinte
-                                        años de historia y una gran comunidad alrededor del mundo.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-sm-6 col-lg-4">
-                            <div class="card h-100">
-                                <img src="images/super-mario.jpg" class="card-img-top card-img-juego" alt="Super Mario Bros">
-                                <div class="card-body">
-                                    <p class="card-text">El clásico plataformero de Nintendo que definió el género y
-                                        marcó a toda una generación de jugadores.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-sm-6 col-lg-4">
-                            <div class="card h-100">
-                                <img src="images/zelda.jpg" class="card-img-top card-img-juego"
-                                    alt="The Legend of Zelda: Ocarina of Time">
-                                <div class="card-body">
-                                    <p class="card-text">Aclamada aventura de acción en 3D, considerada una de las
-                                        mejores obras de la historia de los videojuegos.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-sm-6 col-lg-4">
-                            <div class="card h-100">
-                                <img src="images/final-fantasy.jpg" class="card-img-top card-img-juego" alt="Final Fantasy">
-                                <div class="card-body">
-                                    <p class="card-text">Emblemático RPG japonés con una historia épica y un sistema
-                                        de combate por turnos inolvidable.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-sm-6 col-lg-4">
-                            <div class="card h-100">
-                                <img src="images/Halo.jpg" class="card-img-top card-img-juego" alt="Halo">
-                                <div class="card-body">
-                                    <p class="card-text">Shooter de ciencia ficción que revolucionó el género en
-                                        consolas con Master Chief como protagonista.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-sm-6 col-lg-4">
-                            <div class="card h-100">
-                                <img src="images/street-fighter.jpg" class="card-img-top card-img-juego" alt="Street Fighter">
-                                <div class="card-body">
-                                    <p class="card-text">Uno de los juegos de pelea más icónicos, con combos y
-                                        personajes que marcaron la escena competitiva.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-sm-6 col-lg-4">
-                            <div class="card h-100">
-                                <img src="images/pokemon.jpg" class="card-img-top card-img-juego" alt="Pokémon">
-                                <div class="card-body">
-                                    <p class="card-text">Aventura de captura y batallas de criaturas que se convirtió
-                                        en un fenómeno cultural mundial.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-sm-6 col-lg-4">
-                            <div class="card h-100">
-                                <img src="images/donkey-kong.jpg" class="card-img-top card-img-juego" alt="Donkey Kong">
-                                <div class="card-body">
-                                    <p class="card-text">Clásico plataformero arcade protagonizado por el icónico
-                                        gorila de Nintendo.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-sm-6 col-lg-4">
-                            <div class="card h-100">
-                                <img src="images/metal_gear.jpg" class="card-img-top card-img-juego" alt="Metal Gear Solid">
-                                <div class="card-body">
-                                    <p class="card-text">Pionero del sigilo táctico, con una trama profunda sobre
-                                        guerra y espionaje.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-sm-6 col-lg-4">
-                            <div class="card h-100">
-                                <img src="images/resident_Evil.jpg" class="card-img-top card-img-juego" alt="Resident Evil">
-                                <div class="card-body">
-                                    <p class="card-text">Survival horror que sentó las bases del género con zombis y
-                                        una atmósfera opresiva.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-sm-6 col-lg-4">
-                            <div class="card h-100">
-                                <img src="images/chrono_trigger.jpg" class="card-img-top card-img-juego" alt="Chrono Trigger">
-                                <div class="card-body">
-                                    <p class="card-text">RPG atemporal con viajes en el tiempo y una de las mejores
-                                        narrativas de la era de los 16 bits.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-sm-6 col-lg-4">
-                            <div class="card h-100">
-                                <img src="images/god_war.jpg" class="card-img-top card-img-juego" alt="God of War">
-                                <div class="card-body">
-                                    <p class="card-text">Épica de acción inspirada en la mitología griega,
-                                        protagonizada por Kratos.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-
-                    <h3 id="accesorios"> Accesorios </h3>
-                    <div class="row g-4">
-                        <div class="col-12 col-sm-6 col-md-4">
-                            <div class="card h-100">
-                                <div class="card-body">
-                                    <p class="card-text">Control inalámbrico para PlayStation 4</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-sm-6 col-md-4">
-                            <div class="card h-100">
-                                <div class="card-body">
-                                    <p class="card-text">Volante de carreras para Xbox One</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-sm-6 col-md-4">
-                            <div class="card h-100">
-                                <div class="card-body">
-                                    <p class="card-text">Audífonos gaming con micrófono</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <h3 id="merchandising"> Merchandising </h3>
-                    <div class="row g-4">
-                        <div class="col-12 col-sm-6 col-md-4">
-                            <div class="card h-100">
-                                <div class="card-body">
-                                    <p class="card-text">Figuras de acción de personajes de videojuegos</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-sm-6 col-md-4">
-                            <div class="card h-100">
-                                <div class="card-body">
-                                    <p class="card-text">Camisetas con diseños de videojuegos clásicos</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-sm-6 col-md-4">
-                            <div class="card h-100">
-                                <div class="card-body">
-                                    <p class="card-text">Pósters y arte conceptual de juegos populares</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
     </main>
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-col">
                 <strong>Tienda de Videojuegos "William Wallace"</strong>
-                <p>&copy; 2023 Todos los derechos reservados.</p>
+                <p>&copy; 2026 Todos los derechos reservados.</p>
             </div>
             <div class="footer-col">
                 <span>Contacto</span>
@@ -294,6 +392,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
