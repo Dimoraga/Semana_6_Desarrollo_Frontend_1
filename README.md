@@ -4,7 +4,7 @@
 
 # Contexto
 
-El proyecto de esta corresponde a la segunda actividad sumativa del curso en donde se realizará la actividad denominada "Optimizando la lógica y rendimiento de una página web con Javascript", donde se desarrolla un sitio web que combina BootStrap 5 y Javascript para mejorar tanto la estética como la funcionalidad del sitio web. Existe una particular preocupación en el uso de BootStrap en la maquetación y el diseño visual, junto con la correcta implementación de la interactividad a través de Javascript, que permite gestionar eventos y manipular el DOM de manera efectiva. 
+El proyecto de esta corresponde a la segunda actividad sumativa del curso en donde se realizará la actividad denominada "Optimizando la lógica y rendimiento de una página web con Javascript", donde se desarrolla un sitio web que combina BootStrap 5 y Javascript para mejorar tanto la estética como la funcionalidad del sitio web. Existe una particular preocupación en el uso de BootStrap en la maquetación y el diseño visual, junto con la correcta implementación de la interactividad a través de JavaScript, que permite gestionar eventos y manipular el DOM de manera efectiva. 
 
 # Objetivo
 
@@ -12,6 +12,29 @@ Implementar componentes de Javascript para otorgarle interactividad a una págin
 
 # Estructura del Proyecto
 
+```
+Semana_6/
+├── index.html          # Página de inicio: carrusel, hero, características y catálogo dinámico
+├── nosotros.html       # Información sobre la tienda
+├── productos.html      # Listado de productos por categoría, carrito de compras y búsqueda
+├── contacto.html       # Canales de contacto
+├── css/
+│   └── styles.css      # Estilos propios (variables, gradientes, flexbox, grid, media queries)
+├── js/
+│   ├── main.js         # Carrito de compras y búsqueda (productos.html)
+│   └── productos.js    # Carga dinámica del catálogo con Fetch API (index.html)
+├── data/
+│   └── productos.json  # Catálogo de 21 productos (consolas, juegos y accesorios)
+└── images/             # Logo de la tienda e imágenes de los productos
+```
+
+# Cómo ejecutar el proyecto
+
+1. Clonar o descargar el repositorio.
+2. Abrir el proyecto con un servidor local (por ejemplo, la extensión *Live Server* de VS Code o `python -m http.server`). Es necesario para que `fetch` pueda leer `data/productos.json`; abrir `index.html` directamente con `file://` impedirá que el catálogo se cargue.
+3. Navegar a `index.html`.
+
+Se requiere conexión a internet para cargar Bootstrap y Google Fonts desde sus CDN.
 
 
 # Tecnologías utilizadas en el proyecto
@@ -23,4 +46,21 @@ Implementar componentes de Javascript para otorgarle interactividad a una págin
 
 # Características implementadas
 
+- **Navegación responsive** con navbar de Bootstrap, menú desplegable de categorías y enlaces internos (`productos.html#juegos`, etc.).
+- **Carrusel** de Bootstrap en la página de inicio con cambio automático cada 3 segundos.
+- **Catálogo dinámico** (`index.html`): los productos se cargan desde `data/productos.json` con Fetch API (`async/await`), se generan las tarjetas manipulando el DOM y se muestra un mensaje de estado durante la carga o si ocurre un error.
+- **Carrito de compras** (`productos.html`):
+  - Agregar productos mediante botones y atributos `data-nombre` / `data-precio`.
+  - Quitar productos individualmente o vaciar el carrito completo.
+  - Contador de productos y total actualizados en cada cambio, con formato de moneda chilena (`es-CL`).
+  - Mensaje de carrito vacío y botón "Vaciar carrito" deshabilitado cuando no hay productos.
+- **Búsqueda de productos** por nombre en `productos.html`, sin recargar la página (`preventDefault` sobre el evento `submit`).
+- **Carga diferida de imágenes** (`loading="lazy"`) en las tarjetas del catálogo para mejorar el rendimiento.
+- **Diseño visual retro/gaming** con tipografías Orbitron y Press Start 2P, y grilla adaptable a distintos tamaños de pantalla.
+
+# Posibles mejoras
+
+- Agregar la funcionalidad de búsqueda en `index.html`, `nosotros.html` y `contacto.html` (actualmente solo funciona en `productos.html`).
+- Persistir el carrito con `localStorage`.
+- Agregar un formulario de contacto con validación.
 
