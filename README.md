@@ -41,6 +41,7 @@ Se requiere conexión a internet para cargar Bootstrap y Google Fonts desde sus 
 
 - HTML5 semántico
 - CSS3 (variables personalizadas, gradientes, flexbox, grid y media queries propias)
+- JavaScript (ES6+): manipulación del DOM, eventos, Fetch API con `async/await` para cargar `data/productos.json`, y formato de moneda con `Intl` (`es-CL`)
 - [Bootstrap 5.3.8](https://getbootstrap.com/) (vía CDN) para navbar, carrusel, sistema de grillas y cards
 - Google Fonts (Orbitron y Press Start 2P) para la identidad visual retro/gaming
 
@@ -60,12 +61,4 @@ Se requiere conexión a internet para cargar Bootstrap y Google Fonts desde sus 
   - En las demás páginas redirige a `productos.html?busqueda=<texto>`, que aplica el filtro al cargar.
 - **Carga diferida de imágenes** (`loading="lazy"`) en las tarjetas del catálogo para mejorar el rendimiento.
 - **Diseño visual retro/gaming** con tipografías Orbitron y Press Start 2P, y grilla adaptable a distintos tamaños de pantalla.
-
-# Posibles mejoras
-
-- Eliminar la duplicación de productos entre `productos.html` (HTML estático) y `data/productos.json`, dejando una única fuente de datos.
-- Unificar `crearTarjeta`, que hoy existe en `main.js` y en `productos.js`, en un módulo compartido.
-- Persistir el carrito con `localStorage` y agrupar productos repetidos con una cantidad.
-- Hacer la búsqueda insensible a acentos (por ejemplo, "pokemon" debería encontrar "Pokémon") y ocultar los títulos de las secciones sin resultados.
-- Agregar un formulario de contacto con validación.
 
