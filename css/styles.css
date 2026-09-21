@@ -336,6 +336,43 @@ main p {
   object-fit: cover;
 }
 
+.producto .card {
+  overflow: hidden;
+  border: 1px solid var(--color-borde);
+  border-radius: 14px;
+  box-shadow: var(--sombra-suave);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.producto .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 28px rgba(15, 23, 42, 0.14);
+}
+
+.producto .card-img-top {
+  height: 220px;
+  object-fit: cover;
+}
+
+.producto .card-body {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.producto .card-body .card-text {
+  color: var(--color-acento-oscuro);
+  font-family: var(--fuente-display);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.producto .card-body > p:last-of-type {
+  margin-top: auto;
+  margin-bottom: 14px;
+  font-weight: 700;
+}
+
 .lista-juegos {
   list-style: none;
   padding: 0;
@@ -415,7 +452,36 @@ main p {
   margin-bottom: 4px;
 }
 
+.btn-agregar {
+  display: inline-block;
+  width: 100%;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-texto-claro);
+  background: var(--color-acento-oscuro);
+  border: 1px solid var(--color-acento-oscuro);
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(11, 108, 168, 0.28);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
 
+.btn-agregar:hover {
+  background: #095783;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(11, 108, 168, 0.38);
+}
+
+.btn-agregar:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 8px rgba(11, 108, 168, 0.28);
+}
+
+.btn-agregar:focus-visible {
+  outline: 3px solid rgba(24, 161, 224, 0.45);
+  outline-offset: 3px;
+}
 
 
 @media (max-width: 1024px) {

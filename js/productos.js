@@ -1,4 +1,6 @@
-/* Carga dinámica del catálogo desde un archivo JSON local usando Fetch API */
+/* Conforme a las instrucciones de la actividad se implementa una carga
+dinámica del catálogo de productos desde un archivo JSON local usando Fetch API, esto 
+hace que el código sea más mantenible y escalable. */
 
 const contenedor = document.getElementById('lista-productos');
 const estado = document.getElementById('estado-productos');

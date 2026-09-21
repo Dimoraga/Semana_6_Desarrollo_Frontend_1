@@ -21,8 +21,8 @@ Semana_6/
 ├── css/
 │   └── styles.css      # Estilos propios (variables, gradientes, flexbox, grid, media queries)
 ├── js/
-│   ├── main.js         # Carrito de compras y búsqueda (productos.html)
-│   └── productos.js    # Carga dinámica del catálogo con Fetch API (index.html)
+│   ├── main.js         # Carrito, búsqueda y carga dinámica del catálogo (se incluye en todas las páginas)
+│   └── productos.js    # Carga dinámica de la vitrina de productos con Fetch API (solo index.html)
 ├── data/
 │   └── productos.json  # Catálogo de 21 productos (consolas, juegos y accesorios)
 └── images/             # Logo de la tienda e imágenes de los productos
@@ -48,19 +48,24 @@ Se requiere conexión a internet para cargar Bootstrap y Google Fonts desde sus 
 
 - **Navegación responsive** con navbar de Bootstrap, menú desplegable de categorías y enlaces internos (`productos.html#juegos`, etc.).
 - **Carrusel** de Bootstrap en la página de inicio con cambio automático cada 3 segundos.
-- **Catálogo dinámico** (`index.html`): los productos se cargan desde `data/productos.json` con Fetch API (`async/await`), se generan las tarjetas manipulando el DOM y se muestra un mensaje de estado durante la carga o si ocurre un error.
+- **Vitrina dinámica** (`index.html`, `js/productos.js`): los productos se cargan desde `data/productos.json` con Fetch API (`async/await`), se generan las tarjetas manipulando el DOM y se muestra un mensaje de estado durante la carga o si ocurre un error.
+- **Catálogo dinámico** (`productos.html`, `js/main.js`): al cargar la página, las tarjetas de consolas, juegos y accesorios se vuelven a generar desde `data/productos.json`, agrupadas por categoría. El HTML estático de esas tarjetas queda como contenido de respaldo si el `fetch` falla.
 - **Carrito de compras** (`productos.html`):
   - Agregar productos mediante botones y atributos `data-nombre` / `data-precio`.
   - Quitar productos individualmente o vaciar el carrito completo.
   - Contador de productos y total actualizados en cada cambio, con formato de moneda chilena (`es-CL`).
   - Mensaje de carrito vacío y botón "Vaciar carrito" deshabilitado cuando no hay productos.
-- **Búsqueda de productos** por nombre en `productos.html`, sin recargar la página (`preventDefault` sobre el evento `submit`).
+- **Búsqueda de productos** por nombre desde el buscador de la barra de navegación:
+  - En `productos.html` filtra las tarjetas sin recargar la página (`preventDefault` sobre el evento `submit`) y muestra un mensaje si no hay coincidencias.
+  - En las demás páginas redirige a `productos.html?busqueda=<texto>`, que aplica el filtro al cargar.
 - **Carga diferida de imágenes** (`loading="lazy"`) en las tarjetas del catálogo para mejorar el rendimiento.
 - **Diseño visual retro/gaming** con tipografías Orbitron y Press Start 2P, y grilla adaptable a distintos tamaños de pantalla.
 
 # Posibles mejoras
 
-- Agregar la funcionalidad de búsqueda en `index.html`, `nosotros.html` y `contacto.html` (actualmente solo funciona en `productos.html`).
-- Persistir el carrito con `localStorage`.
+- Eliminar la duplicación de productos entre `productos.html` (HTML estático) y `data/productos.json`, dejando una única fuente de datos.
+- Unificar `crearTarjeta`, que hoy existe en `main.js` y en `productos.js`, en un módulo compartido.
+- Persistir el carrito con `localStorage` y agrupar productos repetidos con una cantidad.
+- Hacer la búsqueda insensible a acentos (por ejemplo, "pokemon" debería encontrar "Pokémon") y ocultar los títulos de las secciones sin resultados.
 - Agregar un formulario de contacto con validación.
 
